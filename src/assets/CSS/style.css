@@ -37,15 +37,17 @@
   box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
-
-.button-increment:hover {
-  box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff;
-  background-color: #81C784; /* Green */
-}
-
+.button-increment:hover,
 .button-decrement:hover {
   box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff;
-  background-color: #E57373; /* Red */
+}
+.button-increment.button-increment:hover,
+.button-decrement.button-increment:hover {
+  background-color: #81C784;
+}
+.button-increment.button-decrement:hover,
+.button-decrement.button-decrement:hover {
+  background-color: #E57373;
 }
 
 footer {
@@ -60,14 +62,12 @@ footer {
   left: 0;
   right: 0;
 }
-
 footer a {
   margin: 0 10px;
   color: #ff6f61;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 footer a:hover {
   color: #4a90e2;
   font-size: x-large;
@@ -77,18 +77,17 @@ footer a:hover {
   .to-do-list {
     padding: 10px;
   }
-
   footer {
     padding: 0.5em;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .to-do-list {
     padding: 15px;
   }
-
   footer {
     padding: 1em;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
